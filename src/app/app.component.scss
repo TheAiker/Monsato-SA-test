@@ -1,0 +1,39 @@
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #417D7A;
+  min-width: 800px;
+  align-content: stretch;
+  padding: 10px;
+  margin: 10px;
+
+  input {
+   background-color: rgb(182, 182, 182);
+  }
+
+  .action-container {
+    display: flex;
+    justify-content: space-between;
+
+    mat-icon {
+      padding: 10px;
+      cursor: pointer;
+    }
+    .folder-actions{
+      display: flex;
+      align-items: center;
+      margin: 0 50px;
+    }
+    .file-actions{
+      display: flex;
+      align-items: center;
+      margin: 0 50px;
+    }
+  }
+
+  .component-container{
+    display: flex;
+    justify-content: space-between;
+  }
+}

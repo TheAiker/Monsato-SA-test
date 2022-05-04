@@ -1,0 +1,10 @@
+<div class="folder-container" >
+  <mat-selection-list [multiple]="false">
+    <mat-list-option class="folder-option" [value]="folder" *ngFor="let folder of folderList let i = index;" (click)="onFolderSelection(folder)">
+      <span mat-line>
+      {{folder.name}}
+      </span>
+      <mat-icon mat-icon-button (click)="onDeleteFolder(i)">delete</mat-icon>
+    </mat-list-option>
+  </mat-selection-list>
+</div>

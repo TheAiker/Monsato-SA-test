@@ -1,0 +1,16 @@
+<div class="file-container" *ngIf="selectedFolder">
+  <div>
+    <form class="example-form">
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Search</mat-label>
+        <input matInput placeholder="Ex. Pizza" (input)="onSearchInputChange($event)">
+      </mat-form-field>
+    </form>
+  </div>
+  <mat-list *ngFor="let file of filteredFiles$ | async; let i = index;">
+    <mat-list-item class="file-option">
+      {{file.name}}
+      <mat-icon mat-icon-button (click)="onDeleteFile(i)">delete</mat-icon>
+    </mat-list-item>
+  </mat-list>
+</div>

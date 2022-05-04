@@ -1,0 +1,21 @@
+<div class="main-container">
+
+  <div class="action-container">
+    <div class="folder-actions">
+      <input matInput [(ngModel)]="folderName" type="text" id="fileInput">
+        <mat-icon (click)="onAddFolder()">save</mat-icon>
+    </div>
+
+    <div class="file-actions">
+      <input  *ngIf="selectedFolder" matInput [(ngModel)]="fileNameInInput" type="text" id="fileInput">
+        <mat-icon *ngIf="selectedFolder" (click)="onAddFile()">save</mat-icon>
+    </div>
+  </div>
+
+  <div class="component-container">
+    <app-folder [selectedFolder]="selectedFolder" (selectedFolderChange)="onFolderSelect($event)" (saveData)="saveData()" [folderList]="folderList"></app-folder>
+    <app-file [selectedFolder]="selectedFolder" (saveData)="saveData()"></app-file>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

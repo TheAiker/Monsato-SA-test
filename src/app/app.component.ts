@@ -1,5 +1,5 @@
 import { IFile, IFolder } from "./components/shared/interface";
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, OnChanges } from "@angular/core";
 
 const localStorageKey = "localData";
 
@@ -13,11 +13,13 @@ export class AppComponent implements OnInit {
   folderList: Array<IFolder> = [];
   folderName: string = "";
   selectedFolder?: IFolder;
+
   constructor() {}
 
   ngOnInit(): void {
     this.loadData();
   }
+
   onFolderSelect(folder: IFolder | undefined) {
     this.selectedFolder = folder;
     console.log(this.selectedFolder);

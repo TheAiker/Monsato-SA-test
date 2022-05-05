@@ -3,19 +3,20 @@
 
   mat-list-option {
     color: #EDE6DB;
+    width: 204px;
+
+    .folder-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
 
     mat-icon {
-      padding: 10px;
       cursor: pointer;
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    .folder-option {
-      display: flex;
-
-
     }
   }
 }

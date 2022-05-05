@@ -1,16 +1,25 @@
 .file-container {
   background-color: #1D5C63;
 
-  mat-list-item {
-    color: #EDE6DB;
-
-    mat-icon {
-      padding: 10px;
-      cursor: pointer;
-    }
+  .search-bar {
+    color: #eddbdb;
   }
 
-  .file-option {
-    display: flex;
+  mat-list-item {
+
+    color: #eddbdb;
+
+    .mat-list-item-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      color: #eddbdb;
+
+      mat-icon {
+        padding: 10px;
+        cursor: pointer;
+      }
+    }
   }
 }

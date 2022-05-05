@@ -29,8 +29,8 @@ export class FolderComponent implements OnInit {
       this.selectedFolderChange.emit(undefined);
       this.saveData.emit(null);
     }
-    console.log(this.selectedFolder);
   }
+
   onFolderSelection(folder: IFolder) {
     this.selectedFolder = folder;
     this.selectedFolderChange.emit(this.selectedFolder);

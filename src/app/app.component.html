@@ -2,13 +2,13 @@
 
   <div class="action-container">
     <div class="folder-actions">
-      <input matInput [(ngModel)]="folderName" type="text" id="fileInput">
-        <mat-icon (click)="onAddFolder()">save</mat-icon>
+      <input matInput placeholder="Name a folder" [(ngModel)]="folderName" type="text" id="fileInput">
+        <mat-icon (click)="onAddFolder()">create_new_folder</mat-icon>
     </div>
 
     <div class="file-actions">
-      <input  *ngIf="selectedFolder" matInput [(ngModel)]="fileNameInInput" type="text" id="fileInput">
-        <mat-icon *ngIf="selectedFolder" (click)="onAddFile()">save</mat-icon>
+      <input  *ngIf="selectedFolder" matInput placeholder="Name a file" [(ngModel)]="fileNameInInput" type="text" id="fileInput">
+        <mat-icon *ngIf="selectedFolder" (click)="onAddFile()">upload_file</mat-icon>
     </div>
   </div>
 
